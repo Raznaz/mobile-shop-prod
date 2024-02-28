@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.ts":
@@ -15,18 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/test.js\");\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test__WEBPACK_IMPORTED_MODULE_0__);\n\r\n(0,_test__WEBPACK_IMPORTED_MODULE_0__.someFn)(34342);\r\n\n\n//# sourceURL=webpack://client/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/test.ts\");\n\r\n(0,_test__WEBPACK_IMPORTED_MODULE_0__.someFn)(34342);\r\n\n\n//# sourceURL=webpack://client/./src/index.ts?");
 
 /***/ }),
 
-/***/ "./src/test.js":
+/***/ "./src/test.ts":
 /*!*********************!*\
-  !*** ./src/test.js ***!
+  !*** ./src/test.ts ***!
   \*********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (1:26)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n> export function someFn(arg: number): string {\\n| \\tconsole.log('💛 ', `'Work is fine' ${arg}`);\\n| \\treturn 'Work is fine' + arg;\");\n\n//# sourceURL=webpack://client/./src/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"someFn\": () => (/* binding */ someFn)\n/* harmony export */ });\nfunction someFn(arg) {\r\n    console.log('💛 ', \"'Work is fine' \".concat(arg));\r\n    return 'Work is fine' + arg;\r\n}\r\n\n\n//# sourceURL=webpack://client/./src/test.ts?");
 
 /***/ })
 
@@ -57,18 +57,6 @@ eval("throw new Error(\"Module parse failed: Unexpected token (1:26)\\nYou may n
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
