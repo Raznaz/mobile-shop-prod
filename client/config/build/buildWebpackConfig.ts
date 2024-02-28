@@ -4,6 +4,7 @@ import { buildLoaders } from './buildLoaders';
 import { buildPlugin } from './buildPlugin';
 import { buildResolved } from './buildResolve';
 import { BuildOptions } from './types/config';
+import { buildDevServer } from './buldDevSrver';
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
 	const { mode, paths } = options;
@@ -21,5 +22,11 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
 			rules: buildLoaders(),
 		},
 		resolve: buildResolved(),
+		devtool: 'inline-source-map',
+		// devServer: buildDevServer(options),
+		devServer: {
+			port: 3000,
+			open: true,
+		},
 	};
 }
