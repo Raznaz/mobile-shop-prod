@@ -1,1 +1,0 @@
-(()=>{"use strict";document.body.innerHTML='<div style="background: red">Hello world</div>',console.log("💛💙 ","'Work is fine' ".concat(34342))})();
