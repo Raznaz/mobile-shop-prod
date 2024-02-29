@@ -1,0 +1,21 @@
+.btn1,
+.btn2 {
+	margin: 0 20px;
+	color: rgb(0, 0, 0);
+	font-size: 40px;
+	background-color: black;
+	cursor: pointer;
+	transition: background-color 0.5s linear;
+
+	&:hover {
+		background-color: #3d3d3d;
+	}
+}
+
+.btn1 {
+	color: green;
+}
+
+.btn2 {
+	color: red;
+}
