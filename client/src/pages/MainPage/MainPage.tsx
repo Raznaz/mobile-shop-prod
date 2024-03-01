@@ -1,8 +1,6 @@
-import React from 'react';
-
 const MainPage = () => {
 	return (
-		<div>
+		<div className='dark'>
 			<h1>MAIN PAGE</h1>
 		</div>
 	);
