@@ -1,4 +1,5 @@
 const AboutPage = () => {
+	document.title = 'About page';
 	return (
 		<div>
 			<h1 className='dark'>ABOUT PAGE</h1>
