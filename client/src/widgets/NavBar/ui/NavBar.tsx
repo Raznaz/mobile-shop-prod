@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import cls from './Navbar.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/provider/ThemeProvider';
+import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import cls from './Navbar.module.scss';
 
 interface NavBarProps {
 	className?: string;
@@ -16,9 +16,9 @@ const NavBar = ({ className }: NavBarProps) => {
 			<div className={cls.container}>
 				<div className={cls.inner}>
 					<div>
-						<Link to={'/'}>
+						<AppLink to={'/'}>
 							<img src='images/logo.svg' alt='logo' />
-						</Link>
+						</AppLink>
 						<button role='button' onClick={toggleTheme}>
 							Change theme
 						</button>
@@ -27,22 +27,32 @@ const NavBar = ({ className }: NavBarProps) => {
 					<nav className={classNames(cls.navbar)}>
 						<ul className={classNames(cls.navbar__list, { dark: true })}>
 							<li className={classNames(cls.navbar__item)}>
-								<Link to={'/'}>Main</Link>
+								<AppLink to={'/'} className={cls.navbar__link}>
+									Main
+								</AppLink>
 							</li>
 							<li className={classNames(cls.navbar__item)}>
-								<Link to={'/about'}>About</Link>
+								<AppLink to={'/about'} className={cls.navbar__link}>
+									About
+								</AppLink>
 							</li>
 						</ul>
 					</nav>
 					<ul className={classNames(cls['user-actions'])}>
 						<li className={classNames(cls['user-actions__item'])}>
-							<Link to={'/login'}>Login</Link>
+							<AppLink to={'/login'} theme={AppLinkTheme.SECONDARY}>
+								Login
+							</AppLink>
 						</li>
 						<li className={classNames(cls['user-actions__item'])}>
-							<Link to={'/'}>Cart</Link>
+							<AppLink to={'/'} theme={AppLinkTheme.SECONDARY}>
+								Cart
+							</AppLink>
 						</li>
 						<li className={classNames(cls['user-actions__item'])}>
-							<Link to={'/'}>Search</Link>
+							<AppLink to={'/'} theme={AppLinkTheme.SECONDARY}>
+								Search
+							</AppLink>
 						</li>
 					</ul>
 				</div>

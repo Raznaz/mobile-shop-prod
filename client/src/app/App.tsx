@@ -8,7 +8,7 @@ const App = () => {
 	const { toggleTheme, theme } = useTheme();
 
 	return (
-		<div className={classNames('app', { test1: true, test2: false }, [theme])}>
+		<div className={classNames('app', {}, [theme])}>
 			<NavBar />
 			<AppRouter />
 		</div>
