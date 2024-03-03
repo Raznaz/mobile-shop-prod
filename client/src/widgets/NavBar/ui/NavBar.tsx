@@ -1,27 +1,23 @@
-import { useTheme } from 'app/provider/ThemeProvider';
-import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import cls from './Navbar.module.scss';
+import MyLogo from 'shared/assets/icons/logo.svg';
 
 interface NavBarProps {
 	className?: string;
 }
 
 const NavBar = ({ className }: NavBarProps) => {
-	const { theme, toggleTheme } = useTheme();
-
 	return (
 		<header className={classNames(cls.header)}>
 			<div className={cls.container}>
 				<div className={cls.inner}>
-					<div>
+					<div className={cls['logo-container']}>
 						<AppLink to={'/'}>
-							<img src='images/logo.svg' alt='logo' />
+							<MyLogo className={cls.logo} />
 						</AppLink>
-						<button role='button' onClick={toggleTheme}>
-							Change theme
-						</button>
+						<ThemeSwitcher />
 					</div>
 
 					<nav className={classNames(cls.navbar)}>
