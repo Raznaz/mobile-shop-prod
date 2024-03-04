@@ -1,6 +1,6 @@
 .sidebar {
 	position: relative;
-	height: calc(100vh - var(--navbar-height));
+	height: calc(100vh - var(--navbar-height) - 70px);
 	width: var(--sidebar-width);
 	background-color: var(--inverted-bg-color);
 	transition: width 0.3s ease-in-out;
@@ -12,8 +12,13 @@
 
 .switchers {
 	position: absolute;
-	bottom: 20px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	bottom: 20px;
+}
+
+.lang {
+	margin: 0 20px;
 }
