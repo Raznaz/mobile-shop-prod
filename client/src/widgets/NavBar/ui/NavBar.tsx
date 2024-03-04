@@ -1,8 +1,8 @@
+import MyLogo from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import cls from './Navbar.module.scss';
-import MyLogo from 'shared/assets/icons/logo.svg';
+import SearchIcon from 'shared/assets/icons/search_icon.svg';
 
 interface NavBarProps {
 	className?: string;
@@ -15,9 +15,8 @@ const NavBar = ({ className }: NavBarProps) => {
 				<div className={cls.inner}>
 					<div className={cls['logo-container']}>
 						<AppLink to={'/'}>
-							<MyLogo className={cls.logo} />
+							<MyLogo className={cls.logo} height={'100'} width={'100'} />
 						</AppLink>
-						<ThemeSwitcher />
 					</div>
 
 					<nav className={classNames(cls.navbar)}>
@@ -45,9 +44,9 @@ const NavBar = ({ className }: NavBarProps) => {
 								Cart
 							</AppLink>
 						</li>
-						<li className={classNames(cls['user-actions__item'])}>
-							<AppLink to={'/'} theme={AppLinkTheme.SECONDARY}>
-								Search
+						<li className={classNames(cls['user-actions__item'], {}, ['search-icon'])}>
+							<AppLink to={'/search'} theme={AppLinkTheme.SECONDARY}>
+								<SearchIcon />
 							</AppLink>
 						</li>
 					</ul>
