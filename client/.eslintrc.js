@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		jest: true,
 	},
 	extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
 	parser: '@typescript-eslint/parser',
@@ -30,11 +31,11 @@ module.exports = {
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 		'no-unused-vars': 'warn',
 		'no-underscore-dangle': 'off',
-
+		'comma-dangle': 'off',
+		'max-len': ['error', { code: 100, ignoreComments: true }],
 		'react/function-component-definition': 'off',
 		'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
 		'react/react-in-jsx-scope': 'off',
-
 		'arrow-body-style': 'off',
 		'prefer-destructuring': 'off',
 		'i18next/no-literal-string': ['error', { markupOnly: true }],
