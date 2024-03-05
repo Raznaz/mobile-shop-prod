@@ -3,7 +3,7 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: ['plugin:react/recommended', 'airbnb'],
+	extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
@@ -12,7 +12,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['@typescript-eslint', 'react'],
+	plugins: ['@typescript-eslint', 'react', 'i18next'],
 	rules: {
 		indent: ['error', 'tab'],
 		'react/jsx-indent': [2, 'tab'],
@@ -37,6 +37,7 @@ module.exports = {
 
 		'arrow-body-style': 'off',
 		'prefer-destructuring': 'off',
+		'i18next/no-literal-string': ['error', { markupOnly: true }],
 	},
 	globals: {
 		__IS_DEV__: true,
