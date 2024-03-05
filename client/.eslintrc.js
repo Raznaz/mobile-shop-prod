@@ -3,23 +3,7 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: [
-		// 'eslint:recommended',
-		// 'plugin:@typescript-eslint/recommended',
-		'plugin:react/recommended',
-		// 'airbnb',
-	],
-	// overrides: [
-	// 	{
-	// 		env: {
-	// 			node: true,
-	// 		},
-	// 		files: ['.eslintrc.{js,cjs}'],
-	// 		parserOptions: {
-	// 			sourceType: 'script',
-	// 		},
-	// 	},
-	// ],
+	extends: ['plugin:react/recommended', 'airbnb'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
@@ -34,6 +18,15 @@ module.exports = {
 		'linebreak-style': 'off',
 		quotes: ['error', 'single'],
 		semi: 'off',
+		'import/extensions': 'off',
+		'import/no-extraneous-dependencies': 'off',
+		'import/prefer-default-export': 'off',
+		'import/no-unresolved': 'off',
+		'import/order': 'off',
+		'no-shadow': 'off',
+		'no-tabs': ['error', { allowIndentationTabs: true }],
+		'no-unused-vars': 'warn',
+		'no-underscore-dangle': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
