@@ -9,7 +9,7 @@ const AboutPage = () => {
 			<h1 className='dark'>{t('about')}</h1>
 			<h2>{t('Chapter')}</h2>
 			<div>
-				<button>some button</button>
+				<button type='button'>some button</button>
 			</div>
 		</div>
 	);

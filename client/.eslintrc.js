@@ -15,6 +15,9 @@ module.exports = {
 	plugins: ['@typescript-eslint', 'react'],
 	rules: {
 		indent: ['error', 'tab'],
+		'react/jsx-indent': [2, 'tab'],
+		'react/jsx-indent-props': [2, 'tab'],
+		'jsx-quotes': 'off',
 		'linebreak-style': 'off',
 		quotes: ['error', 'single'],
 		semi: 'off',
@@ -27,6 +30,13 @@ module.exports = {
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 		'no-unused-vars': 'warn',
 		'no-underscore-dangle': 'off',
+
+		'react/function-component-definition': 'off',
+		'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+		'react/react-in-jsx-scope': 'off',
+
+		'arrow-body-style': 'off',
+		'prefer-destructuring': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,

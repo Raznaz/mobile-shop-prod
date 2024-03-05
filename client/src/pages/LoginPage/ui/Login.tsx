@@ -7,7 +7,7 @@ const Login = () => {
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const filteredItems = useMemo(() => {
-		return items.filter((item) => {
+		return items.filter((item: any) => {
 			return item.toLowerCase().includes(query.toLowerCase());
 		});
 	}, [query, items]);
@@ -20,7 +20,7 @@ const Login = () => {
 			return;
 		}
 
-		setItems((prev) => {
+		setItems((prev: any) => {
 			return [...prev, value];
 		});
 
@@ -40,7 +40,6 @@ const Login = () => {
 					onChange={(e) => setQuery(e.target.value)}
 				/>
 				<form action='' onSubmit={addNewPost}>
-					<label htmlFor=''>New</label>
 					<input type='text' name='' id='' ref={inputRef} />
 					<button type='submit'>add</button>
 				</form>
