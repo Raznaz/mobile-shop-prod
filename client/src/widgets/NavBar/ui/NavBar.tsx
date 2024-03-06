@@ -14,20 +14,20 @@ const NavBar = ({ className }: NavBarProps) => {
 			<div className={cls.container}>
 				<div className={cls.inner}>
 					<div className={cls['logo-container']}>
-						<AppLink to={'/'}>
-							<MyLogo className={cls.logo} height={'100'} width={'100'} />
+						<AppLink to='/'>
+							<MyLogo className={cls.logo} height='100' width='100' />
 						</AppLink>
 					</div>
 
 					<nav className={classNames(cls.navbar)}>
 						<ul className={classNames(cls.navbar__list, { dark: true })}>
 							<li className={classNames(cls.navbar__item)}>
-								<AppLink to={'/'} className={cls.navbar__link}>
+								<AppLink to='/' className={cls.navbar__link}>
 									Main
 								</AppLink>
 							</li>
 							<li className={classNames(cls.navbar__item)}>
-								<AppLink to={'/about'} className={cls.navbar__link}>
+								<AppLink to='/about' className={cls.navbar__link}>
 									About
 								</AppLink>
 							</li>
@@ -35,17 +35,17 @@ const NavBar = ({ className }: NavBarProps) => {
 					</nav>
 					<ul className={classNames(cls['user-actions'])}>
 						<li className={classNames(cls['user-actions__item'])}>
-							<AppLink to={'/login'} theme={AppLinkTheme.SECONDARY}>
+							<AppLink to='/login' theme={AppLinkTheme.SECONDARY}>
 								Login
 							</AppLink>
 						</li>
 						<li className={classNames(cls['user-actions__item'])}>
-							<AppLink to={'/'} theme={AppLinkTheme.SECONDARY}>
+							<AppLink to='/' theme={AppLinkTheme.SECONDARY}>
 								Cart
 							</AppLink>
 						</li>
 						<li className={classNames(cls['user-actions__item'], {}, ['search-icon'])}>
-							<AppLink to={'/search'} theme={AppLinkTheme.SECONDARY}>
+							<AppLink to='/search' theme={AppLinkTheme.SECONDARY}>
 								<SearchIcon />
 							</AppLink>
 						</li>

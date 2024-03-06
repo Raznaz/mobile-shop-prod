@@ -36,9 +36,12 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
 		'react/react-in-jsx-scope': 'off',
+		// 'react/self-closing-comp': 'off',
+		'react/require-default-props': 'off',
 		'arrow-body-style': 'off',
 		'prefer-destructuring': 'off',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		// 'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'i18next/no-literal-string': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,

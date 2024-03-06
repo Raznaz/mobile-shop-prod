@@ -4,7 +4,7 @@ export const LoginAsync = lazy(
 	() =>
 		new Promise((resolve, reject) => {
 			setTimeout(() => {
-				//@ts-ignore
+				// @ts-ignore
 				resolve(import('./Login'));
 			}, 500);
 		})
