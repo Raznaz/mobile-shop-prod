@@ -42,6 +42,7 @@ module.exports = {
 		'prefer-destructuring': 'off',
 		// 'i18next/no-literal-string': ['error', { markupOnly: true }],
 		'i18next/no-literal-string': 'off',
+		'react/jsx-wrap-multilines': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
