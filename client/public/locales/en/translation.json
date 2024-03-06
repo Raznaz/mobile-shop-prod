@@ -1,5 +1,8 @@
 {
   "Change language": "Change language",
   "languageName": "English",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Page Error": "Unexpected error",
+  "Unexpected error": "Unexpected error",
+  "Refresh page": "Refresh page"
 }

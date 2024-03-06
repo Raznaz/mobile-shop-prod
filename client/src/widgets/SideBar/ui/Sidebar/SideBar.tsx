@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button } from 'shared/ui/Button.tsx/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
+import { BugButton } from 'app/provider/ErrorBoundary';
 
 interface SideBarProps {
 	className?: string;
@@ -19,6 +20,7 @@ export const SideBar = () => {
 			<Button onClick={onToggle}>toggle</Button>
 
 			<div className={cls.switchers}>
+				<BugButton />
 				<ThemeSwitcher />
 				<LangSwitcher className={cls.lang} />
 			</div>
