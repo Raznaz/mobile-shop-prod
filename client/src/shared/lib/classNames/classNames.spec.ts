@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
 	test('with only first params ', () => {
@@ -12,8 +12,8 @@ describe('classNames', () => {
 
 	test('with only first params ', () => {
 		const expectResult = 'someClass class1 class2 hovered';
-		expect(classNames('someClass', { hovered: true, hide: false }, ['class1', 'class2'])).toBe(
-			expectResult
-		);
+		expect(
+			classNames('someClass', { hovered: true, hide: false }, ['class1', 'class2'])
+		).toBe(expectResult);
 	});
 });
