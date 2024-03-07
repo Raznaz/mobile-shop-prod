@@ -1,7 +1,7 @@
 import { BugButton } from 'app/provider/ErrorBoundary';
 import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button.tsx/Button';
+import { Button } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import cls from './SideBar.module.scss';

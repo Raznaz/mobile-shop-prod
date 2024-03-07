@@ -1,4 +1,4 @@
-import { Button, ThemeButton } from 'shared/ui/Button.tsx/Button';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import cls from './BugButton.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useEffect, useState } from 'react';
