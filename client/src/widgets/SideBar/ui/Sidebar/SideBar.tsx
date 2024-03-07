@@ -1,10 +1,10 @@
+import { BugButton } from 'app/provider/ErrorBoundary';
 import { useState } from 'react';
-import cls from './SideBar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button } from 'shared/ui/Button.tsx/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
-import { BugButton } from 'app/provider/ErrorBoundary';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import cls from './SideBar.module.scss';
 
 interface SideBarProps {
 	className?: string;
@@ -16,8 +16,13 @@ export const SideBar = () => {
 	const onToggle = () => setCollapsed((prev) => !prev);
 
 	return (
-		<div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [])}>
-			<Button onClick={onToggle}>toggle</Button>
+		<div
+			data-testid='sidebar'
+			className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [])}
+		>
+			<Button data-testid='sidebar-toggle' onClick={onToggle}>
+				toggle
+			</Button>
 
 			<div className={cls.switchers}>
 				<BugButton />
