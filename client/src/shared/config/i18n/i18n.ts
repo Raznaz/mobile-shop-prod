@@ -16,7 +16,6 @@ i18n
 			escapeValue: false, // not needed for react as it escapes by default
 		},
 		defaultNS: 'translation',
-		ns: ['about, mainPage'],
 		backend: {
 			loadPath: '/locales/{{lng}}/{{ns}}.json',
 		},
