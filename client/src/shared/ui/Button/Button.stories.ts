@@ -18,12 +18,20 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
 	args: {
 		children: 'Text',
-		theme: ThemeButton.CLEAR,
+		theme: ThemeButton.PRIMARY,
 	},
 };
 
 export const Secondary: Story = {
 	args: {
 		children: 'Some text',
+		theme: ThemeButton.SECONDARY,
+	},
+};
+
+export const Clear: Story = {
+	args: {
+		children: 'Text',
+		theme: ThemeButton.CLEAR,
 	},
 };

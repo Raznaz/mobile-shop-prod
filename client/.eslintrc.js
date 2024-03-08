@@ -44,6 +44,7 @@ module.exports = {
 		'i18next/no-literal-string': 'off',
 		'react/jsx-wrap-multilines': 'off',
 		'react/jsx-props-no-spreading': 'off',
+		'object-curly-newline': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
