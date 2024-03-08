@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import { BuildPaths } from '../build/types/config';
+import { buildCssLoaders } from '../build/loaders/buildCssLoaders';
 
 const config: StorybookConfig = {
 	stories: ['../../src/**/*.mdx', '../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -30,24 +30,7 @@ const config: StorybookConfig = {
 			src: path.resolve(__dirname, '..', '..', 'src'),
 		};
 
-		config.module?.rules?.push({
-			test: /\.s[ac]ss$/i,
-			use: [
-				true ? 'style-loader' : MiniCssExtractPlugin.loader,
-				{
-					loader: 'css-loader',
-					options: {
-						modules: {
-							auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-							localIdentName: true
-								? '[path][name]__[local]--[hash:base64:5]'
-								: '[hash: base64:8]',
-						},
-					},
-				},
-				'sass-loader',
-			],
-		});
+		config.module?.rules?.push(buildCssLoaders(true));
 		config.resolve?.extensions?.push('ts', 'tsx');
 		config.resolve?.modules?.push(paths.src);
 
