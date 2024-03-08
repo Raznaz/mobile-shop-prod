@@ -3,7 +3,8 @@
 }
 
 .primary {
-	background-color: #ff9900;
+	display: inline-block;
+	background-color: var(--bg-color);
 	color: #000;
 	text-decoration: none;
 	outline: none;
@@ -35,6 +36,22 @@
 
 	&:hover {
 		background-color: #45a049;
+	}
+}
+
+.outline {
+	background: none;
+	border: 1px solid #2d8fff;
+	padding: 1rem 2rem;
+	outline: none;
+	color: #2d8fff;
+	text-align: center;
+	text-decoration: none;
+	transition: all color 0.3s ease;
+	border-radius: 8px;
+	&:hover {
+		color: #9fccff;
+		border-color: #9fccff;
 	}
 }
 

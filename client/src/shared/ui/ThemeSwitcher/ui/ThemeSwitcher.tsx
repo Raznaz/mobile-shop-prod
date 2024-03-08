@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import DarkIcon from 'shared/assets/icons/dark_icon.svg';
 import LightIcon from 'shared/assets/icons/light_icon.svg';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import React from 'react';
 
 interface ThemeSwitcherProps {
 	className?: string;

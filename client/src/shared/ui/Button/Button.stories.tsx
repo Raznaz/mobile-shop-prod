@@ -1,4 +1,6 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import 'app/styles/index.scss';
 
 import { Button, ThemeButton } from './Button';
 
@@ -17,21 +19,27 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
 	args: {
-		children: 'Text',
+		children: 'Primary',
 		theme: ThemeButton.PRIMARY,
 	},
 };
 
 export const Secondary: Story = {
 	args: {
-		children: 'Some text',
+		children: 'Secondary',
 		theme: ThemeButton.SECONDARY,
 	},
 };
 
 export const Clear: Story = {
 	args: {
-		children: 'Text',
+		children: 'Clear',
 		theme: ThemeButton.CLEAR,
+	},
+};
+export const Outline: Story = {
+	args: {
+		children: 'Outline',
+		theme: ThemeButton.OUTLINE,
 	},
 };

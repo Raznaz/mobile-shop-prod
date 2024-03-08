@@ -1,7 +1,7 @@
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import cls from './BugButton.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const BugButton = () => {
 	const [error, setError] = useState(false);

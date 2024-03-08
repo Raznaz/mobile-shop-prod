@@ -45,6 +45,7 @@ module.exports = {
 		'react/jsx-wrap-multilines': 'off',
 		'react/jsx-props-no-spreading': 'off',
 		'object-curly-newline': 'off',
+		'no-param-reassign': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
