@@ -1,5 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
+import { BuildPaths } from '../build/types/config';
 
 const config: StorybookConfig = {
 	stories: ['../../src/**/*.mdx', '../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -21,6 +23,13 @@ const config: StorybookConfig = {
 		autodocs: 'tag',
 	},
 	webpackFinal: async (config) => {
+		const paths: BuildPaths = {
+			build: '',
+			html: '',
+			entry: '',
+			src: path.resolve(__dirname, '..', '..', 'src'),
+		};
+
 		config.module?.rules?.push({
 			test: /\.s[ac]ss$/i,
 			use: [
@@ -40,6 +49,7 @@ const config: StorybookConfig = {
 			],
 		});
 		config.resolve?.extensions?.push('ts', 'tsx');
+		config.resolve?.modules?.push(paths.src);
 
 		return config;
 	},

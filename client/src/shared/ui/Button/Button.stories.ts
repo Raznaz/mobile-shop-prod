@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from './Button';
+import { Button, ThemeButton } from './Button';
 
 const meta: Meta<typeof Button> = {
 	title: 'shared/Button',
@@ -16,9 +16,14 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		children: 'Text',
+		theme: ThemeButton.CLEAR,
+	},
 };
 
 export const Secondary: Story = {
-	args: {},
+	args: {
+		children: 'Some text',
+	},
 };
