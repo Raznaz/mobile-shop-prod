@@ -1,3 +1,4 @@
+import { BugButton } from 'app/provider/ErrorBoundary';
 import React, { useMemo, useRef, useState } from 'react';
 
 const Login = () => {
@@ -51,6 +52,9 @@ const Login = () => {
 						))}
 					</ul>
 				</div>
+			</div>
+			<div>
+				<BugButton />
 			</div>
 		</>
 	);

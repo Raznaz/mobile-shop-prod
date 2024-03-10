@@ -1,8 +1,11 @@
 {
   "Change language": "Изменить язык",
   "languageName": "Русский",
+  "shortLanguageName": "РУ",
   "Page not found": "Страница не найдена",
   "Page Error": "Неожиданная ошибка",
   "Unexpected error": "Непредвиденная ошибка",
-  "Refresh page": "Перезагрузка страницы"
+  "Refresh page": "Перезагрузка страницы",
+  "Main": "Главная",
+  "About": "О нас"
 }

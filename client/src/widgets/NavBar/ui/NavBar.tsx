@@ -19,7 +19,7 @@ const NavBar = ({ className }: NavBarProps) => {
 						</AppLink>
 					</div>
 
-					<nav className={classNames(cls.navbar)}>
+					{/* <nav className={classNames(cls.navbar)}>
 						<ul className={classNames(cls.navbar__list, { dark: true })}>
 							<li className={classNames(cls.navbar__item)}>
 								<AppLink to='/' className={cls.navbar__link}>
@@ -32,7 +32,7 @@ const NavBar = ({ className }: NavBarProps) => {
 								</AppLink>
 							</li>
 						</ul>
-					</nav>
+					</nav> */}
 					<ul className={classNames(cls['user-actions'])}>
 						<li className={classNames(cls['user-actions__item'])}>
 							<AppLink to='/login' theme={AppLinkTheme.SECONDARY}>

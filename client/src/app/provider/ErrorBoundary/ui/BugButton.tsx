@@ -1,4 +1,4 @@
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './BugButton.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, { useEffect, useState } from 'react';
@@ -16,7 +16,7 @@ export const BugButton = () => {
 
 	return (
 		<Button
-			theme={ThemeButton.CLEAR}
+			theme={ButtonTheme.PRIMARY}
 			onClick={throwError}
 			className={classNames('', {}, [])}
 		>

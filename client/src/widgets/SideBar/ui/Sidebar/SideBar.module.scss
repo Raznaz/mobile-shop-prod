@@ -4,6 +4,12 @@
 	width: var(--sidebar-width);
 	background-color: var(--inverted-bg-color);
 	transition: width 0.3s ease-in-out;
+
+	&__btn {
+		// position: absolute;
+		width: 100%;
+		padding: 1rem 0;
+	}
 }
 
 .collapsed {
@@ -21,4 +27,39 @@
 
 .lang {
 	margin: 0 20px;
+}
+
+.navbar {
+	margin-top: 1rem;
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__item {
+		margin: 0 10px;
+		font-size: 1em;
+		list-style-type: none;
+		color: blue;
+	}
+
+	&__link {
+		color: rgb(61 61 255);
+		transition: color 0.5s linear;
+
+		svg {
+			fill: var(--inverted-secondary-color);
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+		}
+
+		&:hover {
+			color: rgb(148 148 148);
+		}
+	}
 }
