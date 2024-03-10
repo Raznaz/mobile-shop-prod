@@ -24,11 +24,14 @@ jobs:
         run: npm run build:prod
         working-directory: client
       - name: linting typescript
+        if: always()
         run: npm run lint:ts
         working-directory: client
       - name: linting css
+        if: always()
         run: npm run lint:scss
         working-directory: client
       - name: unit testing
+        if: always()
         run: npm run test:unit
         working-directory: client
