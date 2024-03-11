@@ -1,10 +1,6 @@
 .modal {
 	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-
+	inset: 0;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -22,7 +18,7 @@
 	max-width: 60%;
 	padding: 20px;
 	border-radius: 1rem;
-	background-color: var(--bg-color);
+	background-color: #fff;
 	transform: scale(0.5);
 	transition: transform 0.3s ease;
 }
