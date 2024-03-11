@@ -46,6 +46,7 @@ module.exports = {
 		'react/jsx-props-no-spreading': 'off',
 		'object-curly-newline': 'off',
 		'no-param-reassign': 'off',
+		'jsx-a11y/click-events-have-key-events': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
