@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["stylelint", "svgr", "testid"],
+	"cSpell.words": ["reduxjs", "stylelint", "svgr", "testid"],
 	"i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
 	"i18n-ally.keystyle": "nested"
 }

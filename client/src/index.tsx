@@ -1,19 +1,22 @@
+import { ErrorBoundary } from 'app/provider/ErrorBoundary';
+import { StoreProvider } from 'app/provider/StoreProvider';
+import { ThemeProvider } from 'app/provider/ThemeProvider';
+import 'app/styles/index.scss';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './app/App';
-import 'app/styles/index.scss';
-import { ThemeProvider } from 'app/provider/ThemeProvider';
 import 'shared/config/i18n/i18n';
-import { ErrorBoundary } from 'app/provider/ErrorBoundary';
-import 'app/styles/index.scss';
+import App from './app/App';
 
 render(
-	<BrowserRouter>
-		<ErrorBoundary>
-			<ThemeProvider>
-				<App />
-			</ThemeProvider>
-		</ErrorBoundary>
-	</BrowserRouter>,
+	<StoreProvider>
+		<BrowserRouter>
+			<ErrorBoundary>
+				<ThemeProvider>
+					<App />
+				</ThemeProvider>
+			</ErrorBoundary>
+		</BrowserRouter>
+	</StoreProvider>,
+
 	document.getElementById('root')
 );
