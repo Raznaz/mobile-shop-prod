@@ -1,3 +1,4 @@
+import { TodoList } from 'entities/ToDo/ui/TodoList';
 import { useTranslation } from 'react-i18next';
 
 const AboutPage = () => {
@@ -9,7 +10,7 @@ const AboutPage = () => {
 			<h1 className='dark'>{t('about')}</h1>
 			<h2>{t('Chapter')}</h2>
 			<div>
-				<button type='button'>some button</button>
+				<TodoList />
 			</div>
 		</div>
 	);

@@ -47,8 +47,8 @@ const Login = () => {
 				<div>
 					<h3>Items</h3>
 					<ul>
-						{filteredItems.map((item) => (
-							<li>{item}</li>
+						{filteredItems.map((item, i) => (
+							<li key={item}>{item}</li>
 						))}
 					</ul>
 				</div>

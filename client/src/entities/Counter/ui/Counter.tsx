@@ -6,6 +6,7 @@ import { counterActions } from '../model/slice/counterSlice';
 export const Counter = () => {
 	const dispatch = useDispatch();
 	const counterValue = useSelector(getCounterValue);
+
 	const increment = () => {
 		dispatch(counterActions.increment());
 	};
