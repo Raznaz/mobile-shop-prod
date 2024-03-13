@@ -4,7 +4,6 @@ import { NavBar } from 'widgets/NavBar';
 import { SideBar } from 'widgets/SideBar';
 import { useTheme } from './provider/ThemeProvider';
 import { AppRouter } from './provider/router';
-import { Modal } from 'shared/ui/Modal/ui/Modal';
 
 const App = () => {
 	const { theme } = useTheme();

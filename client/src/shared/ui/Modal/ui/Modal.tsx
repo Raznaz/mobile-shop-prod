@@ -56,11 +56,10 @@ export const Modal = (props: ModalProps) => {
 			window.removeEventListener('keydown', onKeyDown);
 		};
 	}, [isOpen, onKeyDown]);
-	console.log('🟢 ', classNames(cls.modal, mods, [className, theme]));
 
 	return (
 		<Portal>
-			<div className={classNames(cls.modal, mods, [className, theme])}>
+			<div className={classNames(cls.modal, mods, [className])}>
 				<div role='button' tabIndex={0} className={cls.overlay} onClick={closeHandler}>
 					<div
 						role='button'

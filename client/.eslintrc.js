@@ -15,7 +15,7 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint', 'react', 'i18next', 'react-hooks'],
 	rules: {
-		indent: ['error', 'tab'],
+		indent: 'off',
 		'react/jsx-indent': [2, 'tab'],
 		'react/jsx-indent-props': [2, 'tab'],
 		'jsx-quotes': 'off',
