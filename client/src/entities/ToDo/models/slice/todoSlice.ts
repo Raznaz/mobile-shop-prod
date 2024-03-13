@@ -19,7 +19,6 @@ export const todoSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(fetchTodos.fulfilled, (state, actions) => {
-			console.log('❎payload ', actions.payload);
 			return [...state, ...actions.payload];
 		});
 	},
