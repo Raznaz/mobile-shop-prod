@@ -7,6 +7,7 @@ const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const errorHandler = require('./middleware/errorHandlingMiddleware.js');
 const path = require('path');
+const mongoConnection = require('./config/DB/mongoDB.js');
 
 const PORT = process.env.PORT || 7000;
 
@@ -21,7 +22,10 @@ app.use(errorHandler);
 const start = async () => {
 	try {
 		await sequelize.authenticate();
-		await sequelize.sync();
+		await sequelize.sync({ logging: false });
+
+		await mongoConnection();
+
 		app.listen(PORT, () =>
 			console.log(`🚀🚀🚀 \x1b[33m Server was started on ${PORT} port \x1b`)
 		);
