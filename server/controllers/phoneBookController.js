@@ -14,14 +14,14 @@ class PhoneBookController {
 				countryCode,
 				cityCode,
 				mainNumber,
-				phoneNumber,
+				otherNumber,
 			} = req.body;
 
 			const phone = await Phone.create({
 				countryCode,
 				cityCode,
 				mainNumber,
-				phoneNumber,
+				otherNumber,
 			});
 
 			const phoneUser = await PhoneUser.create({
