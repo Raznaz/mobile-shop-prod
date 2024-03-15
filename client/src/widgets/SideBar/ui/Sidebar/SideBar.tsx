@@ -7,6 +7,7 @@ import cls from './SideBar.module.scss';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import HomeIcon from 'shared/assets/icons/home_icon.svg';
 import AboutIcon from 'shared/assets/icons/about_icon.svg';
+import PhoneBookIcon from 'shared/assets/icons/phone_book.svg';
 import { useTranslation } from 'react-i18next';
 
 interface SideBarProps {
@@ -38,26 +39,26 @@ export const SideBar = () => {
 				<ul className={classNames(cls.navbar__list, { dark: true })}>
 					<li className={classNames(cls.navbar__item)}>
 						<AppLink to='/' className={cls.navbar__link}>
-							{collapsed ? (
+							<div className={cls.inner_text}>
 								<HomeIcon />
-							) : (
-								<span>
-									<HomeIcon />
-									{t('Main')}
-								</span>
-							)}
+								{!collapsed && <span>{t('Main')}</span>}
+							</div>
 						</AppLink>
 					</li>
 					<li className={classNames(cls.navbar__item)}>
 						<AppLink to='/about' className={cls.navbar__link}>
-							{collapsed ? (
-								<AboutIcon width={48} height={48} />
-							) : (
-								<span>
-									<AboutIcon width={48} height={48} />
-									{t('About')}
-								</span>
-							)}
+							<div className={cls.inner_text}>
+								<AboutIcon />
+								{!collapsed && <span>{t('About')}</span>}
+							</div>
+						</AppLink>
+					</li>
+					<li className={classNames(cls.navbar__item)}>
+						<AppLink to='/phone_book' className={cls.navbar__link}>
+							<div className={cls.inner_text}>
+								<PhoneBookIcon />
+								{!collapsed && <span>{t('Phone Book')}</span>}
+							</div>
 						</AppLink>
 					</li>
 				</ul>
