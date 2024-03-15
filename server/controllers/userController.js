@@ -37,16 +37,39 @@ class UserController {
 			return next(ApiError.badRequest(error.message));
 		}
 	}
-	async login(req, res) {}
+	async login(req, res, next) {
+		try {
+			const { email, password } = req.body;
+
+			const user = await User.findOne({ where: { email } });
+
+			if (!user) {
+				return next(
+					ApiError.internalError(`User doesn\'t exist with email: ${email} 🔕`)
+				);
+			}
+
+			const comparePassword = bcryp.compareSync(password, user.password);
+
+			console.log('❎compare ', comparePassword);
+
+			if (!comparePassword) {
+				return next(ApiError.internalError(`Password is incorrect ${password} ⛔`));
+			}
+
+			const token = generateToken(user.id, user.email, user.role);
+			res.status(200).json({ email, token });
+		} catch (error) {
+			return next(ApiError.forbidden(error.message));
+		}
+	}
 
 	async check(req, res, next) {
-		const { id } = req.query;
-
-		if (!id) {
-			return next(ApiError.badRequest(`Your ID=${id} is incorrect 😐`));
-		}
-
-		res.json({ auth: 'MY checkAuthController', id });
+		try {
+			const token = generateToken(req.user.id, req.user.email, req.user.role);
+			return res.json({ token });
+		} catch (error) {}
+		res.status(200).json({ message: 'Good' });
 	}
 }
 
