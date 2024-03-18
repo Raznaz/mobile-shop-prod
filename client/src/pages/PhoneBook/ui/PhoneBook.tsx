@@ -14,18 +14,10 @@ export const PhoneBook = ({ className }: PhoneBookProps) => {
 	const [phones, setPhones] = useState([]);
 	const [query, setQuery] = useState('');
 
-	const filteredPhones = useMemo(() => {
-		return phones.filter((phone) => {
-			return (
-				phone.firstName.toLowerCase().includes(query.toLowerCase()) ||
-				phone.lastName.toLowerCase().includes(query.toLowerCase())
-			);
-		});
-	}, [phones, query]);
-
 	const fetchPhoneBookDate = async () => {
 		try {
-			const { data } = await fetchPhones();
+			const { data } = await axios.get(`${API_URL}?name=${query}`);
+			console.log('⭐data ', data);
 
 			setPhones(data);
 		} catch (error) {
@@ -35,7 +27,7 @@ export const PhoneBook = ({ className }: PhoneBookProps) => {
 
 	useEffect(() => {
 		fetchPhoneBookDate();
-	}, []);
+	}, [fetchPhoneBookDate, query]);
 
 	return (
 		<div className={classNames(cls.phone_book, {}, [className])}>
@@ -55,20 +47,19 @@ export const PhoneBook = ({ className }: PhoneBookProps) => {
 						</div>
 					</div>
 					<ul>
-						{!!filteredPhones.length &&
-							filteredPhones.map((phone) => {
-								return (
-									<li key={phone._id}>
-										{phone.firstName} {phone.lastName}
-										<div>
-											{phone.phones.otherNumber.map((num: any) => {
-												return <p key={num}>{num}</p>;
-											})}
-										</div>
-										<hr />
-									</li>
-								);
-							})}
+						{phones.map((phone) => {
+							return (
+								<li key={phone._id}>
+									{phone.firstName} {phone.lastName}
+									<div>
+										{phone.phones.otherNumber.map((num: any) => {
+											return <p key={num}>{num}</p>;
+										})}
+									</div>
+									<hr />
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 			</div>
