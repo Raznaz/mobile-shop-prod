@@ -50,6 +50,11 @@
 		color: rgb(61 61 255);
 		transition: color 0.5s linear;
 
+		span {
+			display: flex;
+			align-items: center;
+		}
+
 		.inner_text {
 			display: flex;
 			align-items: center;
@@ -65,13 +70,9 @@
 			transition: fill 0.3s ease;
 		}
 
-		span {
-			display: flex;
-			align-items: center;
-		}
-
 		&:hover {
 			color: rgb(148 148 148);
+
 			svg {
 				fill: red;
 			}
