@@ -10,20 +10,30 @@ interface PhoneBookProps {
 
 const API_URL = 'http://localhost:5000/api/phones';
 
+const debounce = (func: Function, time: number) => {
+	let timerId: ReturnType<typeof setTimeout>;
+
+	return (...args: any[]) => {
+		clearTimeout(timerId);
+		timerId = setTimeout(() => {
+			func(...args);
+		}, time);
+	};
+};
+
 export const PhoneBook = ({ className }: PhoneBookProps) => {
 	const [phones, setPhones] = useState([]);
 	const [query, setQuery] = useState('');
 
-	const fetchPhoneBookDate = async () => {
+	const fetchPhoneBookDate = useCallback(async () => {
 		try {
 			const { data } = await axios.get(`${API_URL}?name=${query}`);
-			console.log('⭐data ', data);
 
 			setPhones(data);
 		} catch (error) {
 			throw new Error(error.message);
 		}
-	};
+	}, [query]);
 
 	useEffect(() => {
 		fetchPhoneBookDate();
